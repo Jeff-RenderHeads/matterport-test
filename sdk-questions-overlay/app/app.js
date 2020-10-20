@@ -1,7 +1,7 @@
 "use strict";
 
-const key = "714bcc506d004c76b2bb9e5e89e704f3";
-const sid = "jnFPSnAnYPW";
+const key = "2d4dfb9fd6414902b663c25a6c767cfa";
+const sid = "iL4RdJqi2yK";
 const params = "&help=0&hr=0&play=1&qs=1&brand=0";
 var iframe;
 
@@ -295,10 +295,10 @@ async function loadedShowcaseHandler(mpSdk){
 
     async function loadQuestions(){
         // Can also load questions from file or database
-        console.log("LOADING QUESTIONS!");
+        
         const res = await fetch('assets/questions.json');
         const questions = await res.json();
-
+        console.log("LOADING QUESTIONS! " + questions);
         questions.forEach(question => {
             createMattertag(question);
         });
